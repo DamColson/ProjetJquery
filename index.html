@@ -13,9 +13,10 @@
 </head>
 
 <body>
-<div class="container-fluid">
+  <!-- Début du container tendancies accueillant le slider horizontal -->
+<div class="container-fluid" id="tendancies">
   <h1 class="text-center">Nos coups de coeurs</h1>
-
+<!-- Début du premier Slide -->
   <div class="container-fluid" id="firstSlide">
     <div class="row mx-auto">
       <div class="col-md-3"></div>
@@ -33,6 +34,7 @@
     </div>
 
   </div>
+  <!-- Fin du premier Slide et debut du second Slide -->
   <div class="container-fluid" id="secondSlide">
 
     <div class="row mx-auto">
@@ -49,6 +51,7 @@
       <div class="col-md-3"></div>
     </div>
   </div>
+  <!-- Fin du second Slide et début du troisième Slide -->
     <div class="container-fluid" id="thirdSlide">
 
     <div class="row mx-auto">
@@ -65,6 +68,7 @@
       <div class="col-md-3"></div>
     </div>
   </div>
+  <!-- Fin du troisième Slide et début des onglets permettant de parcourir les trois Slide précédement déclaré -->
   <div class="container-fluid" id="listing">
     <ol class="list-group justify-content-center">
       <li class="list-group-item justify-content-cente align-self-center d-flex" id="toSlideOne">1</li>
@@ -72,59 +76,77 @@
       <li class="list-group-item justify-content-center align-self-center d-flex" id="toSlideThree">3</li>
     </ol>
   </div>
+  <!-- Fun des onglets -->
 </div>
-
+<!-- Fin du container principal du slider horizontal et de fait, fin du slider horizontal, suivi du début de la liste des produits -->
   <div class="container-fluid" id="product">
+    <!--Début de la Navbar de la liste des produits, collapsera lorsque le viewport diminuera -->
     <nav class="navbar navbar-expand-lg justify-content-center align-items-center">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
           <nav class="nav nav-tabs justify-content-center align-items-center">
-            <a class="nav-item nav-link" href="#snacksPaupaul" data-toggle="tab">Nos douceurs Paupaul</a>
             <a class="nav-item nav-link active" href="#coffeePaupaul" data-toggle="tab">Nos cafés Paupaul</a>
+            <a class="nav-item nav-link" href="#snacksPaupaul" data-toggle="tab">Nos douceurs Paupaul</a>
             <a class="nav-item nav-link" href="#goodiesPaupaul" data-toggle="tab">Nos goodies Paupaul</a>
           </nav>
         </div>
       </div>
     </nav>
+    <!-- Fin de la navbar et debut des panneaux de catégories de produits -->
     <div class="tab-content">
+      <!-- Première catégorie -->
       <div class="tab-pane active" id="coffeePaupaul">
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/macchiatocaramel.jpg" alt="macchiatoCaramel" title="macchiatoCaramel" />
+            <span class="productDetail">Macchiato Caramel 4€20</span>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/cappuccino.jpg" alt="cappuccino" title="cappuccino" />
+            <span class="productDetail">Cappuccino 3€80</span>
           </div>
-          <div class="col-4">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-          </div>
-          <div class="col-4">
-          </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/cafeviennois.jpg" alt="cafeviennois" title="cafeviennois" />
+            <span class="productDetail">Café Viennois 4€00</span>
           </div>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/cafelattecaramel.jpg" alt="cafelattecaramel" title="cafelattecaramel" />
+            <span class="productDetail">Café Latte Caramel 3€80</span>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/espressoconpanna.jpg" alt="espressoconpanna" title="espressoconpanna" />
+            <span class="productDetail">Espresso Con Panna 4€20</span>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+            <img class="img-fluid mb-2 mb-md-0 rounded" src="assets/img/moccacino.jpg" alt="moccacino" title="moccacino" />
+            <span class="productDetail">Moccacino 3€80</span>
           </div>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4 mb-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+          </div>
+          <div class="col-12 col-md-4">
+          </div>
+          <div class="col-12 col-md-4">
           </div>
         </div>
       </div>
+      <!-- Fin de la première catégorie, début de la seconde -->
       <div class="tab-pane" id="snacksPaupaul">
+        <p>snacks</p>
         <div class="row">
           <div class="col-3">
           </div>
@@ -136,7 +158,9 @@
           </div>
         </div>
       </div>
+      <!-- Fin de la deuxième catégorie, début de la troisième et dernière -->
       <div class="tab-pane" id="goodiesPaupaul">
+        <p>goodies</p>
         <div class="row">
           <div class="col-3">
           </div>
@@ -148,14 +172,11 @@
           </div>
         </div>
       </div>
-
-
-
-
+      <!-- Fin de la troisième catégorie -->
     </div>
-
+    <!-- Fin des panneaux de catégories -->
   </div>
-
+  <!-- Fin de la liste des produit -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
