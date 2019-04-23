@@ -1,0 +1,42 @@
+/* #firstSlide, #toSlideOne, #secondSlide, #toSlideTwo, #thirdSlide, #toSlideThree{
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+} */
+/* #firstSlide, #secondSlide, #thirdSlide {
+    padding: 50px;
+} */
+#secondSlide, #thirdSlide {
+  display: none;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-right:1rem;
+  margin-left:1rem;
+}
+
+.list-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top:1rem;
+
+}
+
+.absolute{
+  position:absolute;
+  top:15.45rem;
+  left:0;
+  bottom:0;
+  right:0;
+}
