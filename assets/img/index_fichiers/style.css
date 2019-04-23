@@ -1,20 +1,9 @@
 @media (max-width: 570px) {
-  div.specProduct {
-    font-size: 3vw;
-  }
-
-  input.nbInput {
-    width: 18vw;
-  }
-}
-
-@media (min-width: 571px) and (max-width: 768px) {
-  div.specProduct {
-    font-size: 2vw;
-  }
-
-  input.nbInput {
-    width: 10vw;
+  div img.imgModal {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -31,17 +20,13 @@
   border-bottom-left-radius: .3rem
 }
 
-.specProduct {
-  font-size: 1.2vw;
-}
+/* .specProduct {
+  font-size: 3vw;
+} */
 
 img.imgModal {
   width: 75%;
   height: auto;
   padding: 0;
   margin: 0;
-}
-
-.nbInput {
-  width: 6vw;
 }
