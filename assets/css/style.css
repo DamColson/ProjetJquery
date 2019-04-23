@@ -1,0 +1,45 @@
+/*GENARAL*/
+
+body
+{
+  background-color: #f4eec0;
+
+}
+@font-face {
+    font-family: 'black_jackregular';
+    src: url('fonts/blackjack-webfont.eot');
+    src: url('fonts/blackjack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/blackjack-webfont.woff2') format('woff2'),
+         url('fonts/blackjack-webfont.woff') format('woff'),
+         url('fonts/blackjack-webfont.ttf') format('truetype'),
+         url('fonts/blackjack-webfont.svg#black_jackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*navbar*/
+
+.backfont
+{
+  background-color: #f4eec0;
+  color: #7e6752;
+  font-family: 'black_jackregular';
+
+}
+
+.menucolor
+{
+  color: #7e6752!important;
+  font-family: 'black_jackregular';
+}
+
+/*L'onglet marron*/
+.favoritecolorlink
+{
+  background-color:#7e6752;
+}
+
+.logo
+{
+  font-family: 'black_jackregular';
+}
