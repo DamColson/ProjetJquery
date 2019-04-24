@@ -33,21 +33,12 @@
 
 }
 
+.productDetail{
+  display:block;
+}
 
 @media screen and (max-width:767px){
     #tendancies{
       display:none;
     }
-}
-
-@media screen and (max-width:421px){
-  .productDetail{
-    display:block;
-  }
-}
-
-@media screen and (min-width:792px) and (max-width:1265px){
-  .productDetail{
-    display:block;
-  }
 }
