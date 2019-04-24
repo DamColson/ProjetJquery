@@ -15,10 +15,11 @@
 <body>
 
   <!-- Large modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
   <div class="container">
-    <button type="button" class="btn btn-primary" name="button" id="addToCart">Ajouter au panier</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+
+    <button type="button" class="btn btn-primary" name="button" id="addToCart" data-item="cof01">Ajouter au panier</button>
   </div>
 
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -37,11 +38,11 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="p-1">
                     <form id="paupaulForm" action="index.html" method="post">
-                      <input type="number" class="nbInput" name="" value="1" min="1" id="amount" />
+                      <input type="number" class="nbInput" name="" value="1" min="1" max="20" id="amount" data-item="cof01" />
                     </form>
                   </div>
                   <div class="p-2">
-                    <span id="price"></span>
+                    <span id="pricecof01"></span>
                   </div>
                   <div class="p-2">
                     <i class="fa fa-times" aria-hidden="true"></i>
@@ -55,6 +56,14 @@
         <div class="modal-footer">
           <button form="paupaulForm" type="button" class="btn btn-success">Passer Commande</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="display: none;">
+    <div id="cof01">
+      <div class="price">
+        <span>85</span>
       </div>
     </div>
   </div>
