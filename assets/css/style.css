@@ -27,22 +27,84 @@ font-family: 'Anton', sans-serif;
 
 }
 
+#logo
+{
+    font-family: 'Alex Brush', bold;
+    font-size: 30px;
+}
 .menucolor
 {
   color: #7e6752!important;
-  font-family: 'Anton', sans-serif;
+font-family: 'Anton', sans-serif;
+  font-size: 20px;
 }
 
-/*L'onglet marron*/
+.menucolor:hover
+{
+  color: black!important;
+font-family: 'Anton', sans-serif;
+}
+
+
+
 .favoritecolorlink
 {
-  background-color:#7e6752;
+
   font-family: 'Anton', sans-serif;
 }
 
 .logo
 {
-font-family: 'Alex Brush', cursive;
+font-family: 'Alex Brush', bold;
+
+}
+
+
+/*Le Carrousel*/
+
+.btn
+{
+  background-color: #f4eec0;
+  color: #7e6752;
+  border: 1px solid #7e6752;
+  border-radius: 5px 5px 5px 5px;
+font-family: 'Anton', sans-serif;
+}
+.btn:hover
+{
+  background-color: #7e6752;
+  color: #f4eec0;
+  border: 1px solid #f4eec0;
+  border-radius: 5px 5px 5px 5px;
+font-family: 'Anton', sans-serif;
+
+}
+/*le titre dans le Carrousel*/
+h2
+{
+  font-family: 'Alex Brush', bold;
+
+  color: #f4eec0;
+}
+
+/*la flèche de défilement*/
+.arrow{
+animation: animate 2s infinite;
+color:#7e6752;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate() translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate() translate(20px,20px);
+    }
 }
 
 /* La partie Paul*/
