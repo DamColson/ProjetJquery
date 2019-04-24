@@ -23,23 +23,53 @@ body
 {
   background-color: #fffde8;
   color: #7e6752;
-  font-family: 'black_jackregular';
+font-family: 'Anton', sans-serif;
 
 }
 
 .menucolor
 {
   color: #7e6752!important;
-  font-family: 'black_jackregular';
+  font-family: 'Anton', sans-serif;
 }
 
 /*L'onglet marron*/
 .favoritecolorlink
 {
   background-color:#7e6752;
+  font-family: 'Anton', sans-serif;
 }
 
 .logo
 {
-  font-family: 'black_jackregular';
+font-family: 'Alex Brush', cursive;
+}
+
+/* La partie Paul*/
+
+.bloctitle
+{
+  background-color: #7e6752;
+  font-family: 'Alex Brush', cursive;
+}
+.speechpaul
+{
+padding: 20px 20px 20px 20px;
+box-shadow: 8px 12px 10px #7e6752;
+text-align: center;
+font-family: 'Anton', sans-serif;
+}
+
+.photopaul
+{
+margin-bottom:  50px;
+margin-top: -10px;
+
+}
+
+/*FOOTER*/
+.menufooter
+{
+  background-color: #7e6752;
+
 }
