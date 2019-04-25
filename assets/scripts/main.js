@@ -1,3 +1,1 @@
-$(function() {
-  
-});
+AOS.init();

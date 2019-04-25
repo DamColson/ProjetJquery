@@ -1,35 +1,28 @@
 /*GENERAL*/
-
 body
 {
   background-color: #fffde8;
-
 }
-@font-face {
-    font-family: 'black_jackregular';
-    src: url('fonts/blackjack-webfont.eot');
-    src: url('fonts/blackjack-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/blackjack-webfont.woff2') format('woff2'),
-         url('fonts/blackjack-webfont.woff') format('woff'),
-         url('fonts/blackjack-webfont.ttf') format('truetype'),
-         url('fonts/blackjack-webfont.svg#black_jackregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
+/*Les polices*/
 .anton
 {
-font-family: 'Anton', sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 
 .pacifico
 {
-font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
 }
 
 .alexbrush
 {
-font-family: 'Alex Brush', bold;
+  font-family: 'Alex Brush', bold;
+}
+
+.text-marron
+{
+  color:#7e6752;
 }
 
 /*Animation de transition*/
@@ -42,9 +35,9 @@ font-family: 'Alex Brush', bold;
 }
 
 .two {
--webkit-animation-delay: 1.7s;
--moz-animation-delay: 1.7s;
-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
 }
 
 /*==== FADE IN RIGHT ===*/
@@ -81,9 +74,9 @@ animation-delay: 1.7s;
 }
 /*=== FADE IN LEFT ===*/
 .two {
--webkit-animation-delay: 1.7s;
--moz-animation-delay: 1.7s;
-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
 }
 @-webkit-keyframes fadeInLeft {
   from {
@@ -123,39 +116,38 @@ animation-delay: 1.7s;
 {
   background-color: #fffde8;
   color: #7e6752;
-font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
 
 }
 
 #logo
 {
-    font-family: 'Alex Brush', bold;
-    font-size: 30px;
+  font-family: 'Alex Brush', bold;
+  font-size: 30px;
 }
+
 .menucolor
 {
   color: #7e6752!important;
-font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 20px;
 }
 
 .menucolor:hover
 {
   color: black!important;
-font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
 }
-
-
 
 .favoritecolorlink
 {
 
-font-family: 'Anton', sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 
 .logo
 {
-font-family: 'Alex Brush', bold;
+  font-family: 'Alex Brush', bold;
 
 }
 
@@ -166,11 +158,10 @@ font-family: 'Alex Brush', bold;
 
 .bg-beige
 {
-background-color: #f4eec0;
+  background-color: #f4eec0;
 }
 
-
-/*Le Carrousel*/
+/*Le Caroussel*/
 
 .btn
 {
@@ -178,84 +169,87 @@ background-color: #f4eec0;
   color: #7e6752;
   border: 1px solid #7e6752;
   border-radius: 5px 5px 5px 5px;
-font-family: 'Anton', sans-serif;
+  font-family: 'Anton', sans-serif;
 }
+
 .btn:hover
 {
   background-color: #7e6752;
   color: #f4eec0;
   border: 1px solid #f4eec0;
   border-radius: 5px 5px 5px 5px;
-font-family: 'Anton', sans-serif;
-
+  font-family: 'Anton', sans-serif;
 }
+
 /*Les flèches dans le Carrousel*/
+
 .arrowcarousel
 {
   color: #f4eec0;
 }
+
 /*le titre dans le Carrousel*/
+
 .textcarousel
 {
   font-family: 'Anton', sans-serif;
-
   color: #f4eec0;
 }
 
 /*la flèche de défilement*/
+
 .arrow{
-animation: animate 2s infinite;
-color:#7e6752;
+  animation: animate 2s infinite;
+  color:#7e6752;
 }
 
 @keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotate() translate(-20px,-20px);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate() translate(20px,20px);
-    }
+  0%{
+    opacity: 0;
+    transform: rotate() translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate() translate(20px,20px);
+  }
 }
 
 /* La partie Paul*/
 
-
-
 h1
 {
-font-size: 25px;
-color: #f4eec0;
-font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #f4eec0;
+  font-family: 'Pacifico', cursive;
 }
+
 .bloctitle
 {
-background-color: #7e6752;
+  background-color: #7e6752;
 }
+
 .speechpaul
 {
-padding: 20px 20px 20px 20px;
-box-shadow: 8px 12px 10px #7e6752;
-text-align: center;
-font-family: 'Anton', sans-serif;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 8px 12px 10px #7e6752;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
 }
 
 .photopaul
 {
-margin-bottom:  50px;
-margin-top: -10px;
-
+  margin-bottom:  50px;
+  margin-top: -10px;
 }
 
-/*FOOTER*/
+/*Footer*/
+
 .page-footer
 {
   background-color: #7e6752;
-
 }
 
 .footerlink
@@ -264,6 +258,7 @@ margin-top: -10px;
   font-family: 'Anton', sans-serif;
   font-size: 18px;
 }
+
 .footertext
 {
   color: #f4eec0;

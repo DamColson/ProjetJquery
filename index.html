@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-
 <head>
   <meta charset="utf-8" />
-
-  <!-- Bootstrap setting -->
+  <!-- Bootstrap & CSS-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--Les polices-->
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <title>Barista Paupaul</title>
 </head>
-
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <header>
-    <!--LA NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top  backfont">
+    <!--La navbar-->
+    <nav data-aos-duration="3000" data-aos="zoom-in" class="navbar navbar-expand-lg navbar-light fixed-top  backfont">
       <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" id="logo" href="#section0">BP</a>
-
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
           <li class="nav-item active">
@@ -39,169 +37,68 @@
         <form class="form-inline my-2 my-lg-0">
           <input  class="form-control mr-sm-2 bg-beige" type="search" placeholder="" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0 buttonsearch" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-</button>
+          </button>
         </form>
-        <p><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></p>
-
+        <p><i id="cart" data-toggle="modal" data-target=".modalCart" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></p>
       </div>
     </nav>
-
-    <!--LE CAROUSSEL PRINCIPAL-->
-    <div id="section0" class="container-fluid">
+    <!--Le caroussel principal-->
+    <div data-aos-duration="2000" data-aos="zoom-in" id="section0" class="container-fluid">
       <div class="row">
         <div class="col-sm">
-          <div class="bd-example">
-            <div id="carouselproduct" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselproduct" data-slide-to="1" class="active"></li>
-                <li data-target="#carouselproduct" data-slide-to="1"></li>
-                <li data-target="#carouselproduct" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/img/cofeeantique.jpg" class="d-block w-100  " alt="...">
-                  <div class="carousel-caption d-sm-block  d-md-block">
-                    <p class="textcarousel">Notre selection de café</p>
-                    <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/cake.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-sm-block d-md-block">
-                    <p class="textcarousel">Nos pâtisseries favorites</p>
-                    <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/goodies.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-sm-block d-md-block">
-                    <p class="textcarousel">Notre selection d'accessoires</p>
-                    <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
-                  </div>
-                  </div>
+          <div id="carouselproduct" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselproduct" data-slide-to="1" class="active"></li>
+              <li data-target="#carouselproduct" data-slide-to="1"></li>
+              <li data-target="#carouselproduct" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/cofeeantique.jpg" class="d-block w-100  " alt="...">
+                <div class="carousel-caption d-sm-block  d-md-block">
+                  <p class="textcarousel">Notre selection de café</p>
+                  <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
                 </div>
               </div>
-              <a class="carousel-control-prev arrowcarousel" href="#carouselproduct" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next arrowcarousel" href="#carouselproduct" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="carousel-item">
+                <img src="assets/img/cake.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-sm-block d-md-block">
+                  <p class="textcarousel">Nos pâtisseries favorites</p>
+                  <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/goodies.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-sm-block d-md-block">
+                  <p class="textcarousel">Notre selection d'accessoires</p>
+                  <p><a href="#" class="btn " role="button" title="">Consulter</a></p>
+                </div>
+              </div>
             </div>
           </div>
+          <a class="carousel-control-prev arrowcarousel" href="#carouselproduct" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next arrowcarousel" href="#carouselproduct" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
-      <div class="d-flex justify-content-center p-2"><p><i class="fa fa-angle-down fa-3x arrow" aria-hidden="true"></i>
-      </i></div>
-
-    </p>
-  </div>
-</header>
-<!--Partie description Paul-->
-<!-- bloc espace invisible-->
-<div class="d-block p-3  text-white section">
-</div>
-<div class="d-block p-3  text-white section">
-</div>
-<div class="d-block p-3  text-center bloctitle ">
-  <h1 id="section3" class="text-uppercase "> Qui est Paupaul? </h1>
-</div>
-<div class="d-block p-3  text-white section">
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <!--Première colonne-->
-    <div class="col-sm-12 col-md-12 col-lg-6 ">
-      <img src="assets/img/photopaul.jpg" class=" img-responsive photopaul col-sm-6 col-md-8 col-lg-8 fadeInLeft animate two " title=""  alt="Responsive image"  />
     </div>
-    <!--Deuxième colonne-->
-    <div class="col-sm-12 col-md-12 col-lg-6 ">
-      <p class="speechpaul col-sm-12 col-md-12 col-lg-8 fadeInRight animate two">Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt. Nam quis est, pro deorum fidem atque hominum! qui velit, ut neque diligat quemquam nec ipse ab ullo diligatur, circumfluere omnibus copiis atque in omnium rerum abundantia vivere? Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper</p>
-    </div>
-
-
-  </div>
+    <div class="d-flex justify-content-center p-2"><p><i class="fa fa-angle-down fa-3x arrow" aria-hidden="true"></i>
+    </i></div>
+  </p>
 </div>
-
-<!-- Footer -->
-<footer class="page-footer font-small">
-  <!-- Footer Liens -->
-  <div class="container text-center text-md-left mt-5">
-    <!-- Grid row -->
-    <div class="row mt-3 dark-grey-text">
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-
-        <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">BATISTA Paupaul</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px;">
-        <p class="footertext">Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.</p>
-        </div>
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-          <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Nos produits</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto black" style="width: 60px;">
-          <p><a class="footerlink" href="#!">café </a></p>
-          <p>
-            <a class="footerlink" href="#!">thermost</a>
-          </p>
-          <p>
-            <a class="footerlink" href="#!">cake</a>
-          </p>
-          <p>
-            <a class="footerlink" href="#!">croissant</a>
-          </p>
-
-        </div>
-
-        <!-- Colonne Contact -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Liens -->
-          <h6 class="text-uppercase font-weight-bold">Contact</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p class="footertext">
-            <i class="fa fa-map-marker mr-3 "></i> LE HAVRE, FRANCE</p>
-            <p class="footertext">
-              <i class="fa fa-envelope-o mr-3"></i> Contact@baristapaupaul.fr</p>
-              <p class="footertext">
-                <i class="fa fa-phone mr-3"></i> 02-35-65-90-87</p>
-              </div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Liens -->
-                <h6 class="text-uppercase font-weight-bold">PAIEMENT</h6>
-                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p class="footertext">
-                  <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i> CB</p>
-                  <p class="footertext">
-                    <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i> Mastercard</p>
-                    <p class="footertext">
-                      <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i> Carte Visa</p>
-                      <p class="footertext">
-                        <i class="fa fa-cc-paypal fa-2x" aria-hidden="true"></i> Paypal</p>
-                        <p class="footertext">
-                          <i class="fa fa-money fa-2x" aria-hidden="true"></i> En espèces à la livraison</p>
-                    </div>
-            </div>
-          </div>
-          <!--  Le Copyright -->
-          <div class="footer-copyright text-center footertext py-3">© 2019 Copyright:
-            <a class="footerlink" href="https://mdbootstrap.com/education/bootstrap/"> Barista Paupaul</a>
-          </div>
-        </footer>
-        <!-- Footer -->
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <!-- JSmaiSON -->
-        <script type="text/javascript" src="assets/scripts/main.js"></script>
-      </body>
-      </html>
+                  <!--Optional JavaScript-->
+                  <!--jQuery first, then Popper.js, then Bootstrap JS-->
+                  <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+                  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                  <!--JSmaiSON-->
+                  <script type="text/javascript" src="assets/scripts/main.js"></script>
+                </body>
+                </html>
