@@ -379,3 +379,16 @@ img.imgModal {
 i.fa-times {
   cursor: pointer;
 }
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: .3rem;
+  border-bottom-left-radius: .3rem
+}

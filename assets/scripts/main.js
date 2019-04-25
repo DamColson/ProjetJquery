@@ -205,9 +205,33 @@ AOS.init();
       $('.price' + item).text(cartList[indexTab].price);
       $('.amount' + item).val(cartList[indexTab].amount);
     } else {
+      $().hide;
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
     }
     $('#cart').css('color','red');
     $('#emptyCart').hide();
 });
+
+function totalPrice() {
+  var total = 0;
+
+  $.each(cartList, function(indexTab, valTab) {
+    total += valTab.price;
+  });
+
+  $('.total').text('TOTAL : ' + Math.round(100 * total) / 100 + ' €');
+}
+
+$('#order').click(function() {
+   cartList = 0;
+   $('div.cartBody').empty();
+   $().show();
+});
+
+// $('.consult').click(function(){
+//   console.log(('\'' + ($(this).attr('href')) + '\''));
+//   if(!($('\'' + $(this).attr('href')) + '\'').hasClass('active')){
+//     ($('\'' + $(this).attr('href')) + '\'').addClass('active');
+//   }
+// });
