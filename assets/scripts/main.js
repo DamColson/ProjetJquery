@@ -208,6 +208,7 @@ AOS.init();
       $().hide;
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
+      totalPrice();
     }
     $('#cart').css('color','red');
     $('#emptyCart').hide();
