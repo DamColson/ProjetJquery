@@ -24,6 +24,7 @@
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: end;
+  justify-content: space-between;
   padding: 1rem;
   border-top: 1px solid #dee2e6;
   border-bottom-right-radius: .3rem;

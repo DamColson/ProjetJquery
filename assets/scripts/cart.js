@@ -70,7 +70,7 @@ $(function() {
       total += valTab.price;
     });
 
-    $('.total').text('Total à lacher : ' + total + ' €');
+    $('.total').text('TOTAL : ' + Math.round(100 * total) / 100 + ' €');
   }
 
   function supprItem(item) {
