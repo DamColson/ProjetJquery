@@ -114,6 +114,13 @@ AOS.init();
       $('#addToCart').attr('data-item', $(this).attr('data-item'));
     });
 
+    //lorsque l'on clique sur un element possedant la class consult ( les bouton consulter du carrousel donc), l'attribut href sera stocké dans une variable href ( qui renverra #coffeePaupaul, gourmandisesPaupaul ou goodiesPaupaul ), puis la class active est retiré de tout les panneau ( les trois panneau qui sont donc coffeePaupaul gourmandisesPaupaul et goodiesPaupaul et ajoutera une classe active a l'element dont l'id est href et renverra donc sur l'ancre voulue )
+    $('.consult').click(function(){
+      var href = $(this).attr('href');
+      $('.tab-pane').removeClass('active');
+      $(href).addClass('active');
+    });
+
 
 
 
@@ -228,10 +235,4 @@ $('#order').click(function() {
    cartList = 0;
    $('div.cartBody').empty();
    $('#thankYou').show();
-});
-
-$('.consult').click(function(){
-  var href = $(this).attr('href');
-  $('.tab-pane').removeClass('active');
-  $(href).addClass('active');
 });
