@@ -15,7 +15,7 @@ $(function() {
       if (valTab.item == item && justAdd) {
         indexTabReturn = indexTab;
         valTab.amount++;
-        valTab.price = Math.floor(100 * (valTab.price / (valTab.amount - 1)) * valTab.amount) / 100;
+        valTab.price = (valTab.price / (valTab.amount - 1)) * valTab.amount;
       } else if (valTab.item == item) {
         indexTabReturn = indexTab;
       }
@@ -37,7 +37,6 @@ $(function() {
     $(divItem + ' span.title').text(titleItem[0] + ' - réf : ' + item);
     $(divItem + ' input.amount').removeClass('amount').addClass('amount' + item).attr('data-item', item);
     $(divItem + ' span.price').removeClass('price').addClass('price' + item).text(price);
-    $(divItem + ' i.fa-times').attr('data-item', item);
   }
 
   function totalPrice(item) {
@@ -57,33 +56,30 @@ $(function() {
     }
   }
 
-  function supprItem(item) {
-    var removeObject = cartList.map(function(keyItem) {
-      return keyItem.item;
-    }).indexOf(item);
-    cartList.splice(removeObject, 1);
-    $('div.' + item).remove();
-  }
-
-  $(document).on('click', 'input', function() {
-    totalPrice($(this).attr('data-item'));
-  });
-  $(document).on('keyup', 'input', function() {
-    totalPrice($(this).attr('data-item'));
-  });
-  $(document).on('click', 'i.fa-times', function() {
-    supprItem($(this).attr('data-item'));
-  });
+  $(document).on(
+    'click', 'input', function() {
+      console.log('CLICK');
+      totalPrice($(this).attr('data-item'));
+    }
+    // keyup: function() {
+    //   totalPrice($(this).attr('data-item'));
+    // }
+  );
 
   $('#addToCart').click(function() {
     var item = $(this).attr('data-item');
     var price = $('#' + item + ' .price').text();
     var indexTab = hasIdItem(item, 1);
 
+    console.log('CLICK EVENT item : ' + item);
+    console.log('CLICK EVENT index : ' + indexTab);
+
     if (cartList.length && typeof indexTab !== 'undefined') {
+      console.log('CAS MAJ');
       $('.price' + item).text(cartList[indexTab].price);
       $('.amount' + item).val(cartList[indexTab].amount);
     } else {
+      console.log('CAS AJOUT');
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
     }
