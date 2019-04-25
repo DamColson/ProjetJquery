@@ -295,7 +295,7 @@ i.fa-times {
   cursor: pointer;
 }
 
-.modal-footer {
+.modal-footer.cartFooter {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;

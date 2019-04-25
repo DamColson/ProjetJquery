@@ -195,9 +195,11 @@ AOS.init();
 
   $(document).on('click', 'input', function() {
     subTotalPrice($(this).attr('data-item'));
+    totalPrice();
   });
   $(document).on('keyup', 'input', function() {
     subTotalPrice($(this).attr('data-item'));
+    totalPrice();
   });
   $(document).on('click', 'i.fa-times', function() {
     supprItem($(this).attr('data-item'));
@@ -212,7 +214,7 @@ AOS.init();
       $('.price' + item).text(cartList[indexTab].price);
       $('.amount' + item).val(cartList[indexTab].amount);
     } else {
-      $().hide;
+      $('#thankYou').hide();
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
       totalPrice();
@@ -232,7 +234,8 @@ function totalPrice() {
 }
 
 $('#order').click(function() {
-   cartList = 0;
+   cartList = [];
    $('div.cartBody').empty();
    $('#thankYou').show();
+   $('#cart').css('color','');
 });
