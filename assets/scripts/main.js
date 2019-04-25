@@ -123,15 +123,17 @@ AOS.init();
 
 
 
-
+  // Initialisation du tableau qui va contenir les objets
   var cartList = [];
 
-  function Cart(item, amount, price) {
-    this.item = item;
+  // Constructeur des objets qui vont contenir les informations sur les produits du panier
+  function Cart(item, amount, price) { // <=== ça, c'est le nom de mon objet
+    this.item = item; // <=== ceci est une propriété
     this.amount = amount;
     this.price = price;
   }
 
+  // Fonction qui va vérifier si le produit existe déjà dans le panier. Si oui, il retourne son index pour mettre à jour la quantité et le prix
   function hasIdItem(item, justAdd) {
     var indexTabReturn;
 
@@ -144,9 +146,11 @@ AOS.init();
         indexTabReturn = indexTab;
       }
     });
+    // Retourne UNDEFINED : il n'exsite pas dans le tableau
     return indexTabReturn;
   }
 
+  // Fonction qui va créer l'affichage des produits dans le panier. Utilisation de .HTML() pour copier un modèle présent dans index.html. Puis elle va set les attr/class pour la partie dynamique à l'aide de la base de données
   function makeCart(item, price) {
     var titleItem = $('#' + item + ' div.description').text().split('/');
     var divItem = 'div.' + item;
@@ -164,6 +168,7 @@ AOS.init();
     $(divItem + ' i.fa-times').attr('data-item', item);
   }
 
+  // Fonction qui va calculer dynamiquement le sous-total pour chaque produits présents dans le panier
   function subTotalPrice(item) {
     var priceDisplay = $('.price' + item);
     var priceItem = $('#' + item + ' .price').text();
@@ -181,6 +186,7 @@ AOS.init();
     }
   }
 
+  // Fonction qui va supprimer un produit dans le panier. Le map va chercher toutes les propriétés ITEM auquel je vais enchainer un indexOf pour récupérer l'index du produit cherché. Je fournis l'index à splice pour supprimer l'objet dans le tableau
   function supprItem(item) {
     var removeObject = cartList.map(function(keyItem) {
       return keyItem.item;
@@ -193,6 +199,7 @@ AOS.init();
     }
   }
 
+  // point particulier : les events doivent être ratachés aux éléments du DOM pour qu'ils fonctionnent. Quand on clique ou écrit dans un INPUT, les valeurs du produit se mettent à jour ou supprime un produit
   $(document).on('click', 'input', function() {
     subTotalPrice($(this).attr('data-item'));
     totalPrice();
@@ -205,6 +212,7 @@ AOS.init();
     supprItem($(this).attr('data-item'));
   });
 
+  // Fonction principale qui va se charger de créer les objets dans le tableau à objets (le panier). Si il existe, mise à jour en incrémentation de 1. Si non, on fait appel au constructeur pour faire une instance du projet et on le push dans le tableau.
   $('#addToCart').click(function() {
     var item = $(this).attr('data-item');
     var price = $('#' + item + ' .price').text();
@@ -223,6 +231,7 @@ AOS.init();
     $('#emptyCart').hide();
 });
 
+// Fonction qui met à jour dynamiquement le total du panier
 function totalPrice() {
   var total = 0;
 
@@ -233,6 +242,7 @@ function totalPrice() {
   $('.total').text('TOTAL : ' + Math.round(100 * total) / 100 + ' €');
 }
 
+// Event clique sur le bouton ayant l'id order (66) qui va lancer la commande des objets dans le panier
 $('#order').click(function() {
    cartList = [];
    $('div.cartBody').empty();
