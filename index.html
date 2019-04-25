@@ -15,7 +15,7 @@
 <body class="bg-beige">
   <!-- Début du container tendancies accueillant le slider horizontal -->
 <div class="container-fluid bg-beige" id="tendancies">
-  <h1 class="text-center">Nos coups de coeurs</h1>
+  <h1 class="text-center text-marron pacifico">Nos têtes de gondoles</h1>
 <!-- Début du premier Slide -->
   <div class="container-fluid" id="firstSlide">
     <div class="row mx-auto">
@@ -71,15 +71,15 @@
   <!-- Fin du troisième Slide et début des onglets permettant de parcourir les trois Slide précédement déclaré -->
   <div class="container-fluid" id="listing">
     <ol class="list-group justify-content-center">
-      <li class="list-group-item justify-content-cente align-self-center d-flex" id="toSlideOne">1</li>
-      <li class="list-group-item justify-content-center align-self-center d-flex" id="toSlideTwo">2</li>
-      <li class="list-group-item justify-content-center align-self-center d-flex" id="toSlideThree">3</li>
+      <li class="list-group-item justify-content-cente align-self-center d-flex pacifico" id="toSlideOne">1</li>
+      <li class="list-group-item justify-content-center align-self-center d-flex pacifico" id="toSlideTwo">2</li>
+      <li class="list-group-item justify-content-center align-self-center d-flex pacifico" id="toSlideThree">3</li>
     </ol>
   </div>
   <!-- Fun des onglets -->
 </div>
 <!-- Fin du container principal du slider horizontal et de fait, fin du slider horizontal, suivi du début de la liste des produits -->
-  <div class="container-fluid bg-beige" id="product">
+  <div class="container-fluid bg-beige text-marron anton" id="product">
     <!--Début de la Navbar de la liste des produits, collapsera lorsque le viewport diminuera -->
     <nav class="navbar navbar-expand-lg justify-content-center align-items-center">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,9 +88,9 @@
       <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
         <div class="row justify-content-center align-items-center">
           <nav class="nav nav-tabs justify-content-center align-items-center bg-marron">
-            <a class="nav-item nav-link text-beige active" href="#coffeePaupaul" data-toggle="tab">Nos cafés Paupaul</a>
-            <a class="nav-item nav-link text-beige" href="#gourmandisesPaupaul" data-toggle="tab">Nos gourmandises Paupaul</a>
-            <a class="nav-item nav-link text-beige" href="#goodiesPaupaul" data-toggle="tab">Nos goodies Paupaul</a>
+            <a class="nav-item nav-link text-beige pacifico active" href="#coffeePaupaul" data-toggle="tab">Nos cafés Paupaul</a>
+            <a class="nav-item nav-link text-beige pacifico" href="#gourmandisesPaupaul" data-toggle="tab">Nos gourmandises Paupaul</a>
+            <a class="nav-item nav-link text-beige pacifico" href="#goodiesPaupaul" data-toggle="tab">Nos goodies Paupaul</a>
           </nav>
         </div>
       </div>
@@ -185,29 +185,79 @@
   <!-- Fin de la liste des produit -->
   <!-- Button trigger modal -->
 
-
+<button type="button" class="btn bg-marron text-beige" id="cart" data-toggle="modal" data-target=".modalCart">Large modal</button>
 <!-- Modal -->
+
 <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content bg-marron">
       <div class="modal-header">
-        <h5 class="modal-title" id="productModalTitle"></h5>
+        <h3 class="modal-title text-beige pacifico" id="productModalTitle"></h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="modalBody">
-
+      <div class="modal-body text-beige anton" id="modalBody">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn bg-beige" id="addToCart">Ajouter au panier</button>
+        <button type="button" class="btn bg-beige text-marron" id="addToCart">Ajouter au panier</button>
       </div>
     </div>
   </div>
 </div>
 
 
-  <!-- debut de la base de données -->
+
+<!-- Modal panier -->
+
+<div class="modal fade modalCart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content bg-marron text-beige anton">
+       <div class="modal-body cartBody bg-marron text-beige antons">
+         <div class="text-center" id="emptyCart">
+           <h4>Il n'y a rien dans votre panier<i class="ml-2 fa fa-times-circle" aria-hidden="true"></i></h4>
+
+         </div>
+
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn bg-beige text-marron">Passer Commande</button>
+       </div>
+     </div>
+   </div>
+</div>
+
+<!-- modèle de remplissage panier-->
+
+<div class="d-none">
+    <div class="container border rounded html-modal">
+      <div class="row p-2">
+        <div class="col-3 col-md-2 align-self-center img-item">
+          <img class="img-fluid" src="" alt="" />
+        </div>
+        <div class="col-9 col-md-5 specProduct align-self-center">
+          <span class="title"></span>
+        </div>
+        <div class="col-md-5 mt-md-0 mt-4 align-self-center">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="p-1">
+              <form action="index.html" method="post">
+                <input type="number" class="nbInput amount" value="1" min="1" max="20" data-item="" />
+              </form>
+            </div>
+            <div class="p-2">
+              <span class="price"></span><span>€</span>
+            </div>
+            <div class="p-2">
+              <i class="fa fa-times" aria-hidden="true" data-item=""></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- debut de la base de données -->
   <div class="container-fluid d-none">
     <div class="container-fluid" id="cof01">
       <div class="description">Macchiato Caramel/Pour tous les gourmands: le Café Caramel Macchiato Paupaul réunit de savoureuses notes de torréfaction. Vous savourez un irrésistible latte au caramel. Dégustez-le avec une gaufrette croustillante au chocolat.</div>
@@ -256,7 +306,7 @@
     </div>
     <div class="container-fluid" id="cof10">
       <div class="description">Café Crème/Avec sa crème fraiche provenant tout droit d'exploiteur locaux bio, partenaire exclusif de Monsieur Paupaul, le café crème de chez Paupaul vous ravira les papilles</div>
-      <div class="price">3.50s</div>
+      <div class="price">3.50</div>
       <div class="img">assets/img/cafecreme.jpg</div>
     </div>
     <div class="container-fluid" id="cof11">

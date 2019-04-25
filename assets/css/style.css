@@ -1,13 +1,23 @@
-#secondSlide, #thirdSlide {
-  display: none;
-}
+
+/* Css touchant au design */
 
 .bg-marron{
   background-color:#7E6752;
 }
+
 .text-marron{
   color:#7E6752;
 }
+
+.bg-beige{
+  background-color:#F4EEC0;
+}
+
+.text-beige{
+  color:#F4EEC0;
+}
+
+/* css modifiant les listes */
 
 .list-group-item {
   position: relative;
@@ -32,16 +42,56 @@
 
 }
 
-.bg-beige{
-  background-color:#F4EEC0;
-}
+/* Css touchant au slide horizontal */
 
-.text-beige{
-  color:#F4EEC0;
+#secondSlide, #thirdSlide {
+  display: none;
 }
 
 @media screen and (max-width:767px){
     #tendancies{
       display:none;
     }
+}
+
+/* Css de Yoan */
+
+@media (max-width: 570px) {
+  div.specProduct {
+    font-size: 3vw;
+  }
+
+  input.nbInput {
+    width: 18vw;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 768px) {
+  div.specProduct {
+    font-size: 2vw;
+  }
+
+  input.nbInput {
+    width: 10vw;
+  }
+}
+
+
+.specProduct {
+  font-size: 1.2vw;
+}
+
+img.imgModal {
+  width: 75%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.nbInput {
+  width: 6vw;
+}
+
+i.fa-times {
+  cursor: pointer;
 }
