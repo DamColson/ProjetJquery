@@ -27,7 +27,7 @@ $(function() {
     var titleItem = $('#' + item + ' div.description').text().split('/');
     var divItem = 'div.' + item;
 
-    $('div.modal-body').append('<div class="container border rounded bg-light ' + item + '"></div>');
+    $('div.modal-body.cartBody').append('<div class="container border rounded bg-light ' + item + '"></div>');
     $(divItem).append($('div.html-modal').html());
     $(divItem + ' img.img-fluid').attr({
       'src': $('#' + item + ' .img').text(),
@@ -40,11 +40,17 @@ $(function() {
     $(divItem + ' i.fa-times').attr('data-item', item);
   }
 
-  function totalPrice(item) {
+  function subTotalPrice(item) {
     var priceDisplay = $('.price' + item);
     var priceItem = $('#' + item + ' .price').text();
     var amount = +($('.amount' + item).val());
     var indexTab = hasIdItem(item, 0);
+
+    if (amount < 0) {
+      amount = 0;
+    } else if (amount > 20) {
+      amount = 20;
+    }
 
     if (amount >= cartList[indexTab].amount) {
       cartList[indexTab].amount = amount;
@@ -57,6 +63,16 @@ $(function() {
     }
   }
 
+  function totalPrice() {
+    var total = 0;
+
+    $.each(cartList, function(indexTab, valTab) {
+      total += valTab.price;
+    });
+
+    $('.total').text('Total à lacher : ' + total + ' €');
+  }
+
   function supprItem(item) {
     var removeObject = cartList.map(function(keyItem) {
       return keyItem.item;
@@ -66,10 +82,12 @@ $(function() {
   }
 
   $(document).on('click', 'input', function() {
-    totalPrice($(this).attr('data-item'));
+    subTotalPrice($(this).attr('data-item'));
+    totalPrice();
   });
   $(document).on('keyup', 'input', function() {
-    totalPrice($(this).attr('data-item'));
+    subTotalPrice($(this).attr('data-item'));
+    totalPrice();
   });
   $(document).on('click', 'i.fa-times', function() {
     supprItem($(this).attr('data-item'));
@@ -86,6 +104,7 @@ $(function() {
     } else {
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
+      totalPrice();
     }
   });
 
