@@ -230,9 +230,8 @@ $('#order').click(function() {
    $().show();
 });
 
-// $('.consult').click(function(){
-//   console.log(('\'' + ($(this).attr('href')) + '\''));
-//   if(!($('\'' + $(this).attr('href')) + '\'').hasClass('active')){
-//     ($('\'' + $(this).attr('href')) + '\'').addClass('active');
-//   }
-// });
+$('.consult').click(function(){
+  var href = $(this).attr('href');
+  $('.tab-pane').removeClass('active');
+  $(href).addClass('active');
+});
