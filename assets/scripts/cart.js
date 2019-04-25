@@ -77,6 +77,7 @@ $(function() {
     var removeObject = cartList.map(function(keyItem) {
       return keyItem.item;
     }).indexOf(item);
+
     cartList.splice(removeObject, 1);
     $('div.' + item).remove();
   }
@@ -92,6 +93,11 @@ $(function() {
   $(document).on('click', 'i.fa-times', function() {
     supprItem($(this).attr('data-item'));
   });
+  $('#order').click(function() {
+    cartList = 0;
+    $('div.cartBody').empty();
+    $().show();
+  });
 
   $('#addToCart').click(function() {
     var item = $(this).attr('data-item');
@@ -102,6 +108,7 @@ $(function() {
       $('.price' + item).text(cartList[indexTab].price);
       $('.amount' + item).val(cartList[indexTab].amount);
     } else {
+      $().hide;
       cartList.push(new Cart(item, 1, +(price)));
       makeCart(item, price);
       totalPrice();
