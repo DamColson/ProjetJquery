@@ -1,4 +1,4 @@
-/*GENARAL*/
+/*GENERAL*/
 
 body
 {
@@ -17,13 +17,113 @@ body
     font-style: normal;
 
 }
+.anton
+{
+font-family: 'Anton', sans-serif;
+}
+
+.pacifico
+{
+font-family: 'Pacifico', cursive;
+}
+
+.alexbrush
+{
+font-family: 'Alex Brush', bold;
+}
+
+/*Animation de transition*/
+/*Le delais d'exécution pour les animation fade in*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.two {
+-webkit-animation-delay: 1.7s;
+-moz-animation-delay: 1.7s;
+animation-delay: 1.7s;
+}
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+/*=== FADE IN LEFT ===*/
+.two {
+-webkit-animation-delay: 1.7s;
+-moz-animation-delay: 1.7s;
+animation-delay: 1.7s;
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
 /*navbar*/
 
 .backfont
 {
   background-color: #fffde8;
   color: #7e6752;
-font-family: 'Anton', sans-serif;
+font-family: 'Pacifico', cursive;
 
 }
 
@@ -35,14 +135,14 @@ font-family: 'Anton', sans-serif;
 .menucolor
 {
   color: #7e6752!important;
-font-family: 'Anton', sans-serif;
+font-family: 'Pacifico', cursive;
   font-size: 20px;
 }
 
 .menucolor:hover
 {
   color: black!important;
-font-family: 'Anton', sans-serif;
+font-family: 'Pacifico', cursive;
 }
 
 
@@ -50,13 +150,23 @@ font-family: 'Anton', sans-serif;
 .favoritecolorlink
 {
 
-  font-family: 'Anton', sans-serif;
+font-family: 'Anton', sans-serif;
 }
 
 .logo
 {
 font-family: 'Alex Brush', bold;
 
+}
+
+.buttonsearch
+{
+  font-family: 'Pacifico', cursive;
+}
+
+.bg-beige
+{
+background-color: #f4eec0;
 }
 
 
@@ -79,10 +189,15 @@ font-family: 'Anton', sans-serif;
 font-family: 'Anton', sans-serif;
 
 }
-/*le titre dans le Carrousel*/
-h2
+/*Les flèches dans le Carrousel*/
+.arrowcarousel
 {
-  font-family: 'Alex Brush', bold;
+  color: #f4eec0;
+}
+/*le titre dans le Carrousel*/
+.textcarousel
+{
+  font-family: 'Anton', sans-serif;
 
   color: #f4eec0;
 }
@@ -109,10 +224,17 @@ color:#7e6752;
 
 /* La partie Paul*/
 
+
+
+h1
+{
+font-size: 25px;
+color: #f4eec0;
+font-family: 'Pacifico', cursive;
+}
 .bloctitle
 {
-  background-color: #7e6752;
-  font-family: 'Alex Brush', cursive;
+background-color: #7e6752;
 }
 .speechpaul
 {
@@ -130,8 +252,45 @@ margin-top: -10px;
 }
 
 /*FOOTER*/
-.menufooter
+.page-footer
 {
   background-color: #7e6752;
 
+}
+
+.footerlink
+{
+  color: #f4eec0;
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+}
+.footertext
+{
+  color: #f4eec0;
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+}
+
+.footerlink:hover
+{
+  color: black;
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+}
+
+.line
+{
+  font-size: 18px;
+}
+
+h6
+{
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 18px;
+}
+
+hr
+{
+  border: 2px solid #f4eec0;
 }
