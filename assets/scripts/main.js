@@ -227,7 +227,7 @@ function totalPrice() {
 $('#order').click(function() {
    cartList = 0;
    $('div.cartBody').empty();
-   $().show();
+   $('#thankYou').show();
 });
 
 $('.consult').click(function(){
