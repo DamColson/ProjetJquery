@@ -289,3 +289,93 @@ hr
 {
   border: 2px solid #f4eec0;
 }
+
+/* Css touchant au design */
+
+.bg-marron{
+  background-color:#7E6752;
+}
+
+
+.text-beige{
+  color:#F4EEC0;
+}
+
+/* css modifiant les listes */
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color:#7E6752;
+  color:#F4EEC0;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-right:1rem;
+  margin-left:1rem;
+}
+
+.list-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top:1rem;
+
+}
+
+/* Css touchant au slide horizontal */
+
+#secondSlide, #thirdSlide {
+  display: none;
+}
+
+@media screen and (max-width:767px){
+    #tendancies{
+      display:none;
+    }
+}
+
+/* Css de Yoan */
+
+@media (max-width: 570px) {
+  div.specProduct {
+    font-size: 3vw;
+  }
+
+  input.nbInput {
+    width: 18vw;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 768px) {
+  div.specProduct {
+    font-size: 2vw;
+  }
+
+  input.nbInput {
+    width: 10vw;
+  }
+}
+
+
+.specProduct {
+  font-size: 1.2vw;
+}
+
+img.imgModal {
+  width: 75%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.nbInput {
+  width: 6vw;
+}
+
+i.fa-times {
+  cursor: pointer;
+}

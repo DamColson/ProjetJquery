@@ -91,14 +91,362 @@
     </i></div>
   </p>
 </div>
-                  <!--Optional JavaScript-->
-                  <!--jQuery first, then Popper.js, then Bootstrap JS-->
-                  <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-                  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-                  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-                  <!--JSmaiSON-->
-                  <script type="text/javascript" src="assets/scripts/main.js"></script>
-                </body>
-                </html>
+  <!-- Début du container tendancies accueillant le slider horizontal -->
+<div class="container-fluid bg-beige" id="tendancies">
+  <h1 class="text-center text-marron pacifico">Nos têtes de gondoles</h1>
+<!-- Début du premier Slide -->
+  <div class="container-fluid" id="firstSlide">
+    <div class="row mx-auto">
+      <div class="col-md-3"></div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/macchiatocaramel.jpg" alt="macchiatoCaramel" title="macchiatoCaramel" data-item="cof01" />
+
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/painchocolat.jpg" alt="painChocolat" title="painChocolat" data-item="snc03" />
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/mugpaupaul.jpg" alt="mugpaupaul" title="mugpaupaul" data-item="gds02" />
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+  </div>
+  <!-- Fin du premier Slide et debut du second Slide -->
+  <div class="container-fluid bg-beige" id="secondSlide">
+
+    <div class="row mx-auto">
+      <div class="col-md-3"></div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafeviennois.jpg" alt="cafeviennois" title="cafeviennois" data-item="cof03" />
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/Croissant.jpg" alt="croissant" title="croissant" data-item="snc01" />
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/mugpaupaul2.jpg" alt="mugpaupaul" title="mugpaupaul" data-item="gds03" />
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  <!-- Fin du second Slide et début du troisième Slide -->
+    <div class="container-fluid bg-beige" id="thirdSlide">
+
+    <div class="row mx-auto">
+      <div class="col-md-3"></div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/irishcafefrappe.jpg" alt="irishcafefrappe" title="irishcafefrappe" data-item="cof12" />
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/chaussonspommes.jpg" alt="chaussonPommes" title="chaussonPommes" data-item="snc02" />
+      </div>
+      <div class="col-sm-12 col-md-2 text-center">
+        <img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/thermospaul.jpg" alt="thermospaul" title="thermospaul" data-item="gds01" />
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  <!-- Fin du troisième Slide et début des onglets permettant de parcourir les trois Slide précédement déclaré -->
+  <div class="container-fluid" id="listing">
+    <ol class="list-group justify-content-center">
+      <li class="list-group-item justify-content-cente align-self-center d-flex pacifico" id="toSlideOne">1</li>
+      <li class="list-group-item justify-content-center align-self-center d-flex pacifico" id="toSlideTwo">2</li>
+      <li class="list-group-item justify-content-center align-self-center d-flex pacifico" id="toSlideThree">3</li>
+    </ol>
+  </div>
+  <!-- Fun des onglets -->
+</div>
+<!-- Fin du container principal du slider horizontal et de fait, fin du slider horizontal, suivi du début de la liste des produits -->
+  <div class="container-fluid bg-beige text-marron anton" id="product">
+    <!--Début de la Navbar de la liste des produits, collapsera lorsque le viewport diminuera -->
+    <nav class="navbar navbar-expand-lg justify-content-center align-items-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
+        <div class="row justify-content-center align-items-center">
+          <nav class="nav nav-tabs justify-content-center align-items-center bg-marron">
+            <a class="nav-item nav-link text-beige pacifico active" href="#coffeePaupaul" data-toggle="tab">Nos cafés Paupaul</a>
+            <a class="nav-item nav-link text-beige pacifico" href="#gourmandisesPaupaul" data-toggle="tab">Nos gourmandises Paupaul</a>
+            <a class="nav-item nav-link text-beige pacifico" href="#goodiesPaupaul" data-toggle="tab">Nos goodies Paupaul</a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin de la navbar et debut des panneaux de catégories de produits -->
+    <div class="tab-content d-flex justify-content-center align-items-center">
+      <!-- Première catégorie -->
+      <div class="tab-pane active" id="coffeePaupaul">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/macchiatocaramel.jpg" alt="macchiatoCaramel" title="macchiatoCaramel" data-item="cof01" /><span class="d-block">Macchiato Caramel - 4€20</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center" >
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cappuccino.jpg" alt="cappuccino" title="cappuccino" data-item="cof02"/><span class="d-block">Cappuccino - 3€80</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafeviennois.jpg" alt="cafeviennois" title="cafeviennois" data-item="cof03" /><span class="d-block">Café Viennois - 4€00</span></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafelattecaramel.jpg" alt="cafelattecaramel" title="cafelattecaramel" data-item="cof04" /><span class="d-block">Café Latte Caramel - 3€80</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/espressoconpanna.jpg" alt="espressoconpanna" title="espressoconpanna" data-item="cof05" /><span class="d-block">Espresso C. Panna - 4€20</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/moccacino.jpg" alt="moccacino" title="moccacino" data-item="cof06" /><span class="d-block">Moccacino - 3€80</span></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafecorretto.jpg" alt="cafecorretto" title="cafecorretto" data-item="cof07" /><span class="d-block">Café Corretto - 4€00</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafebicerin.jpg" alt="cafebicerin" title="cafebicerin" data-item="cof08" /><span class="d-block">Café Bicerin - 3€80</span></span>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/espressoromano.jpg" alt="espressoromano" title="espressoromano" data-item="cof09" /><span class="d-block">Espresso Romano - 3€50</span></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/cafecreme.jpg" alt="cafecreme" title="cafecreme" data-item="cof10" /><span class="d-block">Café Crème - 3€50</span></span>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/espresso.jpg" alt="espresso" title="espresso" data-item="cof11" /><span class="d-block">Café Espresso - 3€00</span></span>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/irishcafefrappe.jpg" alt="irishcafefrappe" title="irishcafefrappe" data-item="cof12" /><span class="d-block">Irish Café Frappé - 4€50</span></span>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de la première catégorie, début de la seconde -->
+      <div class="tab-pane" id="gourmandisesPaupaul">
+        <div class="row">
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/Croissant.jpg" alt="croissant" title="croissant" data-item="snc01" /><span class="d-block">Croissant - 0€90</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/chaussonspommes.jpg" alt="chaussonPommes" title="chaussonPommes" data-item="snc02" /><span class="d-block">Chausson pommes - 1€20</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/painchocolat.jpg" alt="painChocolat" title="painChocolat" data-item="snc03" /><span class="d-block">Pain au chocolat - 1€00</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/muffin.jpg" alt="muffin" title="muffin" data-item="snc04" /><span class="d-block">Muffin - 2€00</span></span>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de la deuxième catégorie, début de la troisième et dernière -->
+      <div class="tab-pane" id="goodiesPaupaul">
+        <div class="row">
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/thermospaul.jpg" alt="thermospaul" title="thermospaul" data-item="gds01" /><span class="d-block">Thermos Paupaul - 29€99</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/mugpaupaul.jpg" alt="mugpaupaul" title="mugpaupaul" data-item="gds02" /><span class="d-block">Mug recyclable - 4€99</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/mugpaupaul2.jpg" alt="mugpaupaulEmergency" title="mugpaupaulEmergency" data-item="gds03" /><span class="d-block">Mug Emergency - 9€99</span></span>
+          </div>
+          <div class="col-12 col-md-3 d-flex justify-content-center">
+            <span><img class="img-fluid mb-2 mb-md-0 rounded" data-toggle="modal" data-target="#productModal" src="assets/img/mugpaupaul3.jpg" alt="mugpaupaulcalm" title="mugpaupaulcalm" data-item="gds04" /><span class="d-block">Mug keepCalm - 9€99</span></span>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de la troisième catégorie -->
+    </div>
+    <!-- Fin des panneaux de catégories -->
+  </div>
+  <!-- Fin de la liste des produit -->
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-marron">
+      <div class="modal-header">
+        <h3 class="modal-title text-beige pacifico" id="productModalTitle"></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-beige anton" id="modalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-beige text-marron" id="addToCart">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal panier -->
+
+<div class="modal fade modalCart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content bg-marron text-beige anton">
+       <div class="modal-body cartBody bg-marron text-beige antons">
+         <div class="text-center" id="emptyCart">
+           <h4>Il n'y a rien dans votre panier<i class="ml-2 fa fa-times-circle" aria-hidden="true"></i></h4>
+
+         </div>
+
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn bg-beige text-marron">Passer Commande</button>
+       </div>
+     </div>
+   </div>
+</div>
+
+<!-- modèle de remplissage panier-->
+
+<div class="d-none">
+    <div class="container border rounded html-modal">
+      <div class="row p-2">
+        <div class="col-3 col-md-2 align-self-center img-item">
+          <img class="img-fluid" src="" alt="" />
+        </div>
+        <div class="col-9 col-md-5 specProduct align-self-center">
+          <span class="title"></span>
+        </div>
+        <div class="col-md-5 mt-md-0 mt-4 align-self-center">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="p-1">
+              <form action="index.html" method="post">
+                <input type="number" class="nbInput amount" value="1" min="1" max="20" data-item="" />
+              </form>
+            </div>
+            <div class="p-2">
+              <span class="price"></span><span>€</span>
+            </div>
+            <div class="p-2">
+              <i class="fa fa-times" aria-hidden="true" data-item=""></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- debut de la base de données -->
+  <div class="container-fluid d-none">
+    <div class="container-fluid" id="cof01">
+      <div class="description">Macchiato Caramel/Pour tous les gourmands: le Café Caramel Macchiato Paupaul réunit de savoureuses notes de torréfaction. Vous savourez un irrésistible latte au caramel. Dégustez-le avec une gaufrette croustillante au chocolat.</div>
+      <div class="price">4.20</div>
+      <div class="img">assets/img/macchiatocaramel.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof02">
+      <div class="description">Cappuccino/Un espresso riche patiente calmement sous une fine couche de mousse de lait épaisse. Une preuve définitive de l'exceptionnel talent de notre barista : Paupaul en personne !</div>
+      <div class="price">3.80</div>
+      <div class="img">assets/img/cappuccino.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof03">
+      <div class="description">Café Viennois/Notre café viennois est une merveille de la nature! Composée d'un double expresso assez léger, torréfié à partir d'un café clair, le tout surmonté de lait battu avec de la crème fouettée, puis parsemé de chocolat en poudre, le tout effectué avec la maîtrise totale attendu chez Paupaul. La véritable 8ème merveille du monde est à votre portée !</div>
+      <div class="price">4.00</div>
+      <div class="img">assets/img/cafeviennois.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof04">
+      <div class="description">Café Latte Caramel/Nous avons réinventé le Café Latte rien que pour vous – Personnalisez votre boisson. Choisissez votre lait, vos sirops, ajoutez y une touche de nappage au caramel dégustez une boisson unique, préparée rien que pour vous.</div>
+      <div class="price">3.80</div>
+      <div class="img">assets/img/cafelattecaramel.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof05">
+      <div class="description">Espresso Con Panna/Quand l'espresso rencontre la crème fouettée et la cannelle, nous nous trouvons face à une création Paupaul de premier ordre, venez vite y gouter !!</div>
+      <div class="price">4.20</div>
+      <div class="img">assets/img/espressoconpanna.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof06">
+      <div class="description">Moccacino/Que se passe t-il lorsque vous combinez du sirop de chocolat, du lait, de la mousse de lait et du café? Pour beaucoup d'être, absolument rien! Mais entre les mains expertes de Paupaul, vous obtenez un somptueux brevage, alors qu'attendez vous pour l'essayer?</div>
+      <div class="price">3.80</div>
+      <div class="img">assets/img/moccacino.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof07">
+      <div class="description">Café Corretto/Pour les hiver rudes, vous hésitez entre un bon café et un brandy pour vous rechauffer ? N'hésitez plus, Paupaul à la solution pour vous! Grace au café corretto, vous pourrez profiter de votre café préféré, le tout relevé par une légère touche de brandy pour vous aider à passer ce rugueux hiver!</div>
+      <div class="price">4.00</div>
+      <div class="img">assets/img/cafecorretto.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof08">
+      <div class="description">Café Bicerin/Demandez à n'importe qui si mélanger du chocolat, de l'espresso, du lait et de la creme fouettée et assurément il vous dira que c'est trop et que cela ne peut finir qu'en désastre! Paupaul vous prouve le contraire avec son café bicerin, disponible chez Paupaul !</div>
+      <div class="price">3.80</div>
+      <div class="img">assets/img/cafebicerin.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof09">
+      <div class="description">Espresso Romano/L'espresso romano de chez Paupaul, ou le mélange parfait entre l'acidité du citron et l'arôme du café.</div>
+      <div class="price">3.50</div>
+      <div class="img">assets/img/espressoromano.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof10">
+      <div class="description">Café Crème/Avec sa crème fraiche provenant tout droit d'exploiteur locaux bio, partenaire exclusif de Monsieur Paupaul, le café crème de chez Paupaul vous ravira les papilles</div>
+      <div class="price">3.50</div>
+      <div class="img">assets/img/cafecreme.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof11">
+      <div class="description">Espresso/Un espresso? Banal me direz vous! Mais nous parlons ici d'un espresso torrefié par Paupaul en personne, avec du café sélectionné personnallement dans les meilleure plantation au monde et moulu avec amour de ses propres mains. L'espresso Paupaul, la qualité, la vraie!</div>
+      <div class="price">3.00</div>
+      <div class="img">assets/img/espresso.jpg</div>
+    </div>
+    <div class="container-fluid" id="cof12">
+      <div class="description">Irish Café Frappé/Il fait chaud et votre corps réclame sa dose de fraicheur! Mais c'est le week end et vous ne diriez pas non à un petit verre de whisky au soleil! Paulpaul à la solution pour vous ! Avec son irish café frappé, tous vos désirs seront assouvis !</div>
+      <div class="price">4.50</div>
+      <div class="img">assets/img/irishcafefrappe.jpg</div>
+    </div>
+    <div class="container-fluid" id="snc01">
+      <div class="description">Croissant Paupaul/Quoi de mieux pour accompagner votre boisson favorite qu'un croissant fait avec amour par l'un des meilleur boulanger de France? C'est ce que vous propose le croissant Paupaul, qualité Paupaul certifiée !</div>
+      <div class="price">0.90</div>
+      <div class="img">assets/img/Croissant.jpg</div>
+    </div>
+    <div class="container-fluid" id="snc02">
+      <div class="description">Chausson aux pommes Paupaul/La pomme est à l'honneur aujourd'hui chez Paupaul, grace à ce chausson aux pommes certifié qualité Paupaul! Préparez vous pour une explosion de saveur à un prix défiant toute concurrence !!</div>
+      <div class="price">1.20</div>
+      <div class="img">assets/img/chaussonspommes.jpg</div>
+    </div>
+    <div class="container-fluid" id="snc03">
+      <div class="description">Pain au chocolat Paupaul/Pour une somme modique, Paupaul vous offre de qui est probablement le meilleur pain au chocolat au monde, avec son chocolat de la plus haute qualité parsemé de ses éclats d'amandes que Paupaul a récolté lui même pour l'occassion, un véritable délice !</div>
+      <div class="price">1.00</div>
+      <div class="img">assets/img/painchocolat.jpg</div>
+    </div>
+    <div class="container-fluid" id="snc04">
+      <div class="description">MuffinPaupaul/Comme tout les produit certifié qualité Paupaul, ce muffin moelleux et au saveurs exquises vous comblera de bonheur !</div>
+      <div class="price">2.00</div>
+      <div class="img">assets/img/muffin.jpg</div>
+    </div>
+    <div class="container-fluid" id="gds01">
+      <div class="description">Thermos Paupaul/Avec sa toute nouvelle isolation sous vide à double paroi, non seulement vous pourrez remplir le thermos Paupaul de boisson chaude ou froide, mais vous pourrez également faire votre thé favoris grace à son compartiment spécial qui peut recevoir des feuilles de thé et son filtre intégré. Définitivement un must have pour tout consommateur !</div>
+      <div class="price">39.99</div>
+      <div class="img">assets/img/thermospaul.jpg</div>
+    </div>
+    <div class="container-fluid" id="gds02">
+      <div class="description">Mug recyclable Paupaul/Un mug reutilisable et recyclable pour vous suivre partout où vous irez tout en respectant la planète !</div>
+      <div class="price">4.99</div>
+      <div class="img">assets/img/mugpaupaul.jpg</div>
+    </div>
+    <div class="container-fluid" id="gds03">
+      <div class="description">Mug Paupaul Emergency/Où faut-il aller en cas d'urgence? Paupaul bien sur! Ce mug est là pour vous le rappeler !</div>
+      <div class="price">9.99</div>
+      <div class="img">assets/img/mugpaupaul2.jpg
+      </div>
+    </div>
+    <div class="container-fluid" id="gds04">
+      <div class="description">Mug Paupaul KeepCalm/Noooon je ne sais pas quoi choisir entre le macchiato caramel de chez Paupaul et son magnifique café viennois, que faire ??? Pas de soucis, ce mug vous rappelera une chose simple !! Reste calme et écoute Paupaul !!</div>
+      <div class="price">9.99</div>
+      <div class="img">assets/img/mugpaupaul3.jpg</div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JSmaiSON -->
+  <script type="text/javascript" src="assets/scripts/main.js"></script>
+</body>
+
+</html>
