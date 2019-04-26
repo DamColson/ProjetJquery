@@ -221,6 +221,7 @@ AOS.init();
     if (cartList.length && typeof indexTab !== 'undefined') {
       $('.price' + item).text(cartList[indexTab].price);
       $('.amount' + item).val(cartList[indexTab].amount);
+      totalPrice();
     } else {
       $('#thankYou').hide();
       cartList.push(new Cart(item, 1, +(price)));
