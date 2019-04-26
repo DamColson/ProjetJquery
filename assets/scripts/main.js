@@ -225,7 +225,6 @@ function supprItem(item) {
   $('div.' + item).remove();
   totalPrice();
   if (cartList.length == 0) {
-    console.log(cartList.length);
     $('#cart').css('color', '');
     $('#emptyCart').show();
     $('span.total').empty();
