@@ -199,6 +199,12 @@ function subTotalPrice(item) {
   var amount = +($('.amount' + item).val());
   var indexTab = hasIdItem(item, 0);
 
+  if (amount < 0) {
+    amount = 0;
+  } else if (amount > 20) {
+    amount = 20;
+  }
+
   if (amount >= cartList[indexTab].amount) {
     cartList[indexTab].amount = amount;
     cartList[indexTab].price = +(priceItem) * cartList[indexTab].amount;
