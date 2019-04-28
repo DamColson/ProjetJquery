@@ -187,9 +187,9 @@ function makeCart(item, price) {
     'alt': 'Image réf :' + item
   });
   $(divItem + ' span.title').text(titleItem[0] + ' - réf : ' + item);
-  $(divItem + ' input.amount').removeClass('amount').addClass('amount' + item).attr('data-item', item);
+  $(divItem + ' input.amount').removeClass('amount').addClass('amount' + item).data('item', item);
   $(divItem + ' span.price').removeClass('price').addClass('price' + item).text(price);
-  $(divItem + ' i.fa-times').attr('data-item', item);
+  $(divItem + ' i.fa-times').data('item', item);
 }
 
 // Fonction qui va calculer dynamiquement le sous-total pour chaque produits présents dans le panier
