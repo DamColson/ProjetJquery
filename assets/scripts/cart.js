@@ -35,15 +35,15 @@ $(function() {
       'alt': 'Image réf :' + item
     });
     $(divItem + ' span.title').text(titleItem[0] + ' - réf : ' + item);
-    $(divItem + ' input.amount').removeClass('amount').addClass('amount' + item).attr('data-item', item);
+    $(divItem + ' span.amount').removeClass('amount').addClass('amount' + item).data('item', item);
     $(divItem + ' span.price').removeClass('price').addClass('price' + item).text(price);
-    $(divItem + ' i.fa-times').attr('data-item', item);
+    $(divItem + ' i.fa-times').data('item', item);
   }
 
   function subTotalPrice(item) {
     var priceDisplay = $('.price' + item);
     var priceItem = $('#' + item + ' .price').text();
-    var amount = +($('.amount' + item).val());
+    var amount = +($('.amount' + item).text(); // <== remplace l'INPUT text/val
     var indexTab = hasIdItem(item, 0);
 
     if (amount < 0) {
@@ -82,19 +82,19 @@ $(function() {
     $('div.' + item).remove();
   }
 
-  $(document).on('click', 'input', function() {
-    subTotalPrice($(this).attr('data-item'));
+  $(document).on('click', 'i.fa-plus-square', function() {
+    subTotalPrice(); // trouver le moyen de récupérer la référence
     totalPrice();
   });
-  $(document).on('keyup', 'input', function() {
-    subTotalPrice($(this).attr('data-item'));
+  $(document).on('click', 'i.fa-minus-square', function() {
+    subTotalPrice();
     totalPrice();
   });
   $(document).on('click', 'i.fa-times', function() {
-    supprItem($(this).attr('data-item'));
+    supprItem($(this).data('item'));
   });
   $('#order').click(function() {
-    cartList = 0;
+    cartList = [];
     $('div.cartBody').empty();
     $().show();
   });
